@@ -69,3 +69,38 @@
   color: red;
   border-radius: 5px;
 }
+/*  */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.chartsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+}
+
+.chartWrapper {
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.chartWrapper canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.Bar{
+  width: 600px;
+  height: 400px;
+}
+
+.datee{
+  margin-top: 55px;
+  margin-left: 40px;
+}

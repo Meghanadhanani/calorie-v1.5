@@ -72,3 +72,38 @@
   color: red;
   border-radius: 5px;
 }
+/*  */
+
+.details_container__SNJ8b {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.details_chartsContainer__MI0ND {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+}
+
+.details_chartWrapper__XirG2 {
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.details_chartWrapper__XirG2 canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.details_Bar__D0B8L{
+  width: 600px;
+  height: 400px;
+}
+
+.details_datee__Z8Ob3{
+  margin-top: 55px;
+  margin-left: 40px;
+}

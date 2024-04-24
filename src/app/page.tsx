@@ -23,28 +23,35 @@ interface NutritionData {
   sugar_g: number;
 }
 
-const getNutritionData = (): NutritionData[] => {
+const getNutritionData = (selectedDate: string): NutritionData[] => {
   if (typeof window !== "undefined") {
     const storedData = localStorage.getItem("nutritionData");
 
     try {
       if (storedData) {
-        return JSON.parse(storedData);
+        const data = JSON.parse(storedData);
+        return data.filter((item: NutritionData) => item.date.includes(selectedDate));
       }
     } catch (error) {
       console.error("Error parsing nutrition data:", error);
     }
   }
 
-  return []; // Return an empty array if no data or parsing error occurs
+  return [];
 };
 
 const Dashboard = () => {
   const [nutritionData, setNutritionData] = useState<NutritionData[]>([]);
+  const [selectedDate, setSelectedDate] = useState(new Date().toISOString().slice(0, 10));
+
+  const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedDate(event.target.value);
+  };
 
   useEffect(() => {
-    setNutritionData(getNutritionData());
-  }, []); // Empty dependency array ensures this runs only once on component mount
+    setNutritionData(getNutritionData(selectedDate));
+  }, [selectedDate]);
+
   const totalCalories = Math.round(
     nutritionData.reduce((acc, item) => acc + item.calories, 0)
   );
@@ -58,15 +65,15 @@ const Dashboard = () => {
         label: "Calories",
         data: nutritionData.map((item) => item.calories),
         backgroundColor: [
-          "#FF6384", // Red
-          "#36A2EB", // Blue
-          "#FFCE56", // Yellow
-          "#4BC0C0", // Turquoise
-          "#9966CC", // Purple
-          "#FF8C00", // Orange
-          "#87CEEB", // Sky Blue
-          "#FFD700", // Gold
-          "#32CD32", // Lime Green
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56",
+          "#4BC0C0",
+          "#9966CC",
+          "#FF8C00",
+          "#87CEEB",
+          "#FFD700",
+          "#32CD32",
           "#FF69B4",
         ],
       },
@@ -88,7 +95,6 @@ const Dashboard = () => {
           },
         },
       },
-      // Add the following options for better font rendering
       defaultFontFamily: "Arial, sans-serif",
       defaultFontSize: 14,
       defaultFontColor: "#fff",
@@ -128,15 +134,15 @@ const Dashboard = () => {
           nutritionData.reduce((acc, item) => acc + item.potassium_mg, 0),
         ],
         backgroundColor: [
-          "#FF6384", // Red
-          "#36A2EB", // Blue
-          "#FFCE56", // Yellow
-          "#4BC0C0", // Turquoise
-          "#9966CC", // Purple
-          "#FF8C00", // Orange
-          "#87CEEB", // Sky Blue
-          "#FFD700", // Gold
-          "#32CD32", // Lime Green
+          "#FF6384",
+          "#36A2EB",
+          "#FFCE56",
+          "#4BC0C0",
+          "#9966CC",
+          "#FF8C00",
+          "#87CEEB",
+          "#FFD700",
+          "#32CD32",
           "#FF69B4",
         ],
       },
@@ -153,7 +159,6 @@ const Dashboard = () => {
           },
         },
       },
-      // Add the following options for better font rendering
       defaultFontFamily: "Arial, sans-serif",
       defaultFontSize: 14,
       defaultFontColor: "#fff",
@@ -182,7 +187,6 @@ const Dashboard = () => {
           },
         },
       },
-      // Add the following options for better font rendering
       defaultFontFamily: "Arial, sans-serif",
       defaultFontSize: 14,
       defaultFontColor: "#fff",
@@ -200,6 +204,15 @@ const Dashboard = () => {
         <h1 className=" w-[100%] h-[10%] text-center text-4xl font-semibold text-slate-800 pt-6   bg-white border-2 border-white shadow-lg">
           Nutrition Dashboard
         </h1>
+        <div className={styles.datee}>
+        <input 
+          type="date"
+          value={selectedDate}
+          onChange={handleDateChange}
+
+          className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        </div>
         <div className=" w-[100%] h-[90%] flex  justify-between items-center gap-10 p-[60px]">
           <div className=" flex-col w-[33.33%] h-[100%] flex justify-center items-centerborder-2  mb-5  items-center gap-5 ">
             <div className="w-full h-[90%]   border-white shadow-lg p-3 rounded-lg">
