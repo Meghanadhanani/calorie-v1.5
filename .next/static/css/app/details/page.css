@@ -1,0 +1,74 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/details/details.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+.details_addItemBtn__XkN4v {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .details_addItemBtn__XkN4v:hover {
+    background-color: #45a049;
+  }
+  
+  .details_cancelBtn__Sxupi {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .details_cancelBtn__Sxupi:hover {
+    background-color: #d32f2f;
+  }
+  
+  .details_subBtn__9Ma_a {  
+    background-color: #45a049;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .details_subBtn__9Ma_a:hover {
+    background-color: #d32f2f;
+  }
+  
+  .details_filterDateDiv__bwzcp{
+    margin-top: 40px;
+    font-weight:500;
+    font-size: 20px;
+    display: flex;
+    gap: 6px;
+  }
+  
+.details_dele__59_VQ{
+  margin-top: 10px;
+  margin-left: 15px;
+  color: red;
+  border-radius: 5px;
+}

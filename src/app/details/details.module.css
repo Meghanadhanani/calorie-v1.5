@@ -1,0 +1,71 @@
+.addItemBtn {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .addItemBtn:hover {
+    background-color: #45a049;
+  }
+  
+  .cancelBtn {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cancelBtn:hover {
+    background-color: #d32f2f;
+  }
+  
+  .subBtn {  
+    background-color: #45a049;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subBtn:hover {
+    background-color: #d32f2f;
+  }
+  
+  .filterDateDiv{
+    margin-top: 40px;
+    font-weight:500;
+    font-size: 20px;
+    display: flex;
+    gap: 6px;
+  }
+  
+.dele{
+  margin-top: 10px;
+  margin-left: 15px;
+  color: red;
+  border-radius: 5px;
+}
